@@ -2,6 +2,22 @@
   font-family: Open Sans;
   src: url(../font/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2);
 }
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont.eot');
+  src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('iconfont.woff') format('woff'), /* chrome、firefox */ url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('iconfont.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
 * {
   margin: 0;
   padding: 0;
@@ -159,7 +175,7 @@ header .nav li:hover .sub-bar {
   color: #333333;
   font-size: 12px;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 26px;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
@@ -170,6 +186,7 @@ header .nav li:hover .sub-bar {
   line-height: 26px;
   color: #9da0a7;
   margin-bottom: 6px;
+  vertical-align: baseline;
 }
 .card .profile dd a {
   color: #9da0a7;
@@ -191,4 +208,53 @@ header .nav li:hover .sub-bar {
   -o-border-radius: 3px;
   border-radius: 3px;
   background-color: #33d685;
+}
+.card .iconfont {
+  margin-right: 10px;
+  vertical-align: baseline;
+}
+.card .social-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #33d685;
+  width: 100%;
+  height: 85px;
+}
+.card .social-bar .social {
+  width: 450px;
+  height: 55px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -225px;
+  margin-top: -27.5px;
+}
+.card .social-bar li {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin: 5px 15px;
+  text-align: center;
+}
+.card .social-bar li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-indent: 10px;
+  -webkit-transition: 250ms all ease;
+  -moz-transition: 250ms all ease;
+  -ms-transition: 250ms all ease;
+  -o-transition: 250ms all ease;
+  transition: 250ms all ease;
+}
+.card .social-bar li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.card .social-bar li i {
+  font-size: 20px;
+  line-height: 45px;
+  color: #fff;
+  text-align: center;
 }
