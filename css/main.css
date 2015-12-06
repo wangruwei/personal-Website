@@ -449,7 +449,7 @@ header .nav li:hover .sub-bar {
 }
 .works {
   width: 940px;
-  margin: 70px auto;
+  margin: 70px auto 0;
   text-align: center;
 }
 .works h2 {
@@ -457,4 +457,102 @@ header .nav li:hover .sub-bar {
   margin-bottom: 25px;
   font-weight: normal;
   font-size: 36px;
+}
+.timeline {
+  width: 940px;
+  height: 837px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.timeline .timeline-bar {
+  position: absolute;
+  left: 50%;
+  top: 80px;
+  margin-left: -2px;
+  width: 4px;
+  height: 575px;
+  background: #33d685;
+  opacity: 0.2;
+}
+.timeline-box {
+  width: 435px;
+  position: absolute;
+  border-top: 5px solid #33d685;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+  padding: 20px 2.5%;
+  background: #fff;
+}
+.timeline-box .date {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.timeline-box p {
+  text-align: left;
+  color: #757575;
+}
+.timeline-box h3 {
+  font-size: 22px;
+  color: #414141;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+.timeline-box h4 {
+  margin-bottom: 30px;
+  color: #878787;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+.timeline-box.left .arrow {
+  width: 12px;
+  height: 41px;
+  position: absolute;
+  top: 55px;
+  right: -12px;
+  background: url(../img/arrows.png) no-repeat -18px 0;
+}
+.timeline-box.left .arrow i {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid #fff;
+  display: block;
+}
+.timeline-box.left .dot {
+  position: absolute;
+  top: 71px;
+  right: -39px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #33d685;
+}
+.timeline-box.right .arrow {
+  width: 12px;
+  height: 41px;
+  position: absolute;
+  top: 55px;
+  left: -12px;
+  background: url(../img/arrows.png) no-repeat 0 0;
+}
+.timeline-box.right .arrow i {
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 10px solid #fff;
+  display: block;
+}
+.timeline-box.right .dot {
+  position: absolute;
+  top: 71px;
+  left: -39px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #33d685;
 }
