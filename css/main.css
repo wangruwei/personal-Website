@@ -458,6 +458,13 @@ header .nav li:hover .sub-bar {
   font-weight: normal;
   font-size: 36px;
 }
+.works.chief .timeline {
+  height: 570px;
+  margin-bottom: 70px;
+}
+.works.chief .timeline-bar {
+  height: 400px;
+}
 .timeline {
   width: 940px;
   height: 837px;
@@ -555,4 +562,15 @@ header .nav li:hover .sub-bar {
   height: 8px;
   border-radius: 50%;
   background: #33d685;
+}
+.contact {
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact h2 {
+  color: #3d4451;
+  margin-bottom: 25px;
+  font-weight: normal;
+  font-size: 36px;
 }
