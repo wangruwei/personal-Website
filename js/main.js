@@ -1,23 +1,17 @@
 'use strict';
 document.addEventListener('DOMContentLoaded',function(){
 	//map
-	var oMap = document.querySelector('#container');
-	oMap.addEventListener('DOMMouseScroll',function(ev){
-		ev.preventDefault();
-	},false);
-	var map = new AMap.Map('container');
 	var map = new AMap.Map('container',{
-        zoom: 12,
+        zoom: 11,
         center: [116.4228,39.988829],
         mapStyle: 'light'
     });
     var icon = new AMap.Icon({
-            image : 'img/loca.png',//24px*24px
-            //icon可缺省，缺省时为默认的蓝色水滴图标，
+            image : 'img/loca.png',
             size : new AMap.Size(42,42)
     });
     var marker = new AMap.Marker({
-            icon : icon,//24px*24px
+            icon : icon,
             position : [116.4228,39.988829],
             offset : new AMap.Pixel(-21,-21),
             map : map
