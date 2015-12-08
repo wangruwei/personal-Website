@@ -1,36 +1,56 @@
 'use strict';
 document.addEventListener('DOMContentLoaded',function(){
-	//map
-	var map = new AMap.Map('container',{
-        zoom: 11,
-        center: [116.4228,39.988829],
-        mapStyle: 'light'
-    });
-    var icon = new AMap.Icon({
-            image : 'img/loca.png',
-            size : new AMap.Size(42,42)
-    });
-    var marker = new AMap.Marker({
-            icon : icon,
-            position : [116.4228,39.988829],
-            offset : new AMap.Pixel(-21,-21),
-            map : map
-    });
-	//contact me left
+	//head
+	var oHd = document.querySelector('header');
+	var oSimShow = document.querySelector('.sim-show');
+	var oMe = document.querySelector('.me');
+	var oSha = oMe.querySelector('.shadow');
+	var oOther = document.querySelector('.others');
+	oHd.style.width = document.documentElement.clientWidth+'px';
+	oHd.style.height = document.documentElement.clientHeight+'px';
+	oHd.style.backgroundSize = document.documentElement.clientWidth+'px auto';
+	oOther.style.width = document.documentElement.clientWidth+'px';
+	oOther.style.height = document.documentElement.clientHeight+'px';
+	oOther.style.backgroundSize = document.documentElement.clientWidth+'px auto';
+	//me scale
+	window.onresize = window.onscroll = function(){
+		var oHd = document.querySelector('header');
+		var oSimShow = document.querySelector('.sim-show');
+		oHd.style.width = document.documentElement.clientWidth+'px';
+		oHd.style.height = document.documentElement.clientHeight+'px';
+		oHd.style.backgroundSize = document.documentElement.clientWidth+'px auto';
+		oOther.style.width = document.documentElement.clientWidth+'px';
+		oOther.style.height = document.documentElement.clientHeight+'px';
+		oOther.style.backgroundSize = document.documentElement.clientWidth+'px auto';
+		var scale = oMe.offsetTop-document.body.scrollTop;
+		oMe.style.backgroundPosition = 'center '+(scale/3-200)+'px';
+		oSha.style.opacity = 0.8*(1-scale/200);
+	};
+	//me 选项卡
 	;(function(){
-		var oCon = document.querySelector('.my-info');
-		var aDd = oCon.getElementsByTagName('dd');
-		var aI = oCon.getElementsByTagName('i');
-		for(var i=0;i<aDd.length;i++){
+		var oUl = oMe.getElementsByTagName('ul')[0];
+		var oOl = oMe.getElementsByTagName('ol')[0];
+		var aLi = oUl.children;
+		var aBtn = oOl.children;
+		for(var i=0;i<aBtn.length;i++){
 			(function(index){
-				aDd[i].onmouseover = function(){
-					aI[index].style.opacity = 1;
-				};
-				aDd[i].onmouseout = function(){
-					aI[index].style.opacity = 0;
+				aBtn[i].onmouseover = function(){
+					for(var i=0;i<aBtn.length;i++){
+						aBtn[i].className = '';
+						aLi[i].style.opacity = 0;
+					}
+					aBtn[index].className = 'on';
+					aLi[index].style.opacity = 1;
 				};
 			})(i);
 		}
+	})();
+	//header btn
+	;(function(){
+		var oBtn = oHd.querySelector('.me-btn');
+		oBtn.onmouseover = function(){
+			
+		};
 	})();
 	
 },false);

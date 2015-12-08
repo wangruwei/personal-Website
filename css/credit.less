@@ -7,6 +7,10 @@
 	left: @left;
 	top: @top;
 }
+::selection {
+    background: @color;
+    color: #FFF;
+}
 .transition(@time:1s,@style:all,@fn:ease){
 	-webkit-transition: @time @style @fn;
     -moz-transition: @time @style @fn;
